@@ -1,1 +1,1 @@
-Copyright [2015] [Yang Yang]
+Copyright [2015] [Philips Research North America]
