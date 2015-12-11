@@ -1,9 +1,11 @@
 # Healthcare_MachineLearning_Pipeline
 Introduction:
+
 Modelling, measurement and assessment of hospital performance have gained an increased importance over recent years due to their value towards (a) better self-evaluation by hospitals, (b) more informed hospital selection decisions by patients, and (c) development of performance-based payment structures by health-insurance providers such as the Center for Medicare and Medicaid Services (CMS). Due to data heterogeneity and complexity, there is no single best model working for all the scenarios, e.g. modelling in-hospital mortality as an outcome on administrative data is a scenario different than modelling in-hospital length of stay as an outcome on patient clinical data. There is an urgent need to build an automated pipeline which gives the user opportunities to test a few different types of models on the same dataset in a neat and fast manner. We developed such a pipeline wrapped up in a Linux command-line operated program. The pipeline has additional properties like flexible parallel/serial scheme, flexible model parameter tuning, robust to different datasets with mixed types of explanatory and response variables, complete logging and error collecting system, and the ease to add more models in the future. We named it “PhilipsHealthcareBDS”, where “BDS” represents “Big Data Solution”.
 
 
 Quick Manual:
+
 Open R console under Linux, install R package “packrat” from CRAN by the command “install.packages(“packrat”)”; then type “packrat::unbundle(bundle, where)” to unbundle the compressed ‘bundle’d project to your designated path. 
 
 install.packages(“packrat”)
