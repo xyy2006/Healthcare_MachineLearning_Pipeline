@@ -1,0 +1,25 @@
+# Content: The node profile configuration file
+# HOST_NAME       status  r15s   r1m  r15m   ut    pg  ls    it   tmp   swp   mem
+# reds.philabs.re     ok   0.0   0.0   0.0   0%   0.0   2  2132   12G 33.4G 45.9G
+# jets.philabs.re     ok   0.0   0.0   0.0   0%   0.0   0     1  282G 39.9G 93.2G
+# marlins.philabs     ok   0.0   0.0   0.0   0%   0.0   1  2214   13G 25.7G  1.2G
+# eagles.philabs.     ok   0.0   0.0   0.0   0%   0.0   1   207   11G 33.2G 29.1G
+# bluejays.philab     ok   0.1   0.3   0.1   0%   0.0   1     2   11G 64.6G 60.3G
+# braves.philabs.     ok   1.0   1.0   1.0   4%   0.0   1   732   13G 17.4G   13G
+# browns.philabs.     ok   1.0   1.0   1.0   4%   0.0   2  2098   11G 33.1G 28.2G
+########################################################################################
+nodeName	cpus
+reds	0	# max:24, mem:118gb
+jets	12	# max:24, mem:94
+marlins	0	# max:24, mem:31, may have problem.
+eagles	12	# max:24, mem:31
+bluejays	12	# max:24, mem:62
+braves	0	# max:24, mem:15, may have problem.
+browns	12	# max:24, mem:31
+
+ 
+
+
+
+
+

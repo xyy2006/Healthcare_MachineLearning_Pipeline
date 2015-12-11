@@ -1,0 +1,18 @@
+{
+    "contents" : "library(SparkR)\n#---setting the env for Rstudio to find Spark----#\n# Sys.setenv(SPARK_HOME=”/home/ec2-user/spark-1.5.0/”)\n# .libPaths(new = c(file.path(Sys.getenv(“SPARK_HOME”), “R”, “lib”), .libPaths()))\n# sc <- sparkR.init(master = \"local\",sparkHome = \"/home/ec2-user/spark-1.5.0\")\n# sqlContext <- sparkRSQL.init(sc)\n# SparkDF <- createDataFrame(sqlContext, faithful)\n# head(SparkDF)\n\n#---with settup put in ./.Rprofile, we will have simply----#\nsc <- sparkR.init(master = \"local\")\nsqlContext <- sparkRSQL.init(sc)\nSparkDF <- createDataFrame(sqlContext, faithful)\nhead(SparkDF)\ncolnames(SparkDF)\nnames(SparkDF)\ndim(SparkDF)\n",
+    "created" : 1444838100316.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1334900537",
+    "id" : "F6F39F03",
+    "lastKnownWriteTime" : 1444846850,
+    "path" : "/home/ec2-user/PhilipsHealthcareBDS/PhilipsHealthcareBDS/setting_up_sparkR_env.r",
+    "project_path" : "setting_up_sparkR_env.r",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

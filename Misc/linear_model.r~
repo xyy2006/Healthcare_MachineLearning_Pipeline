@@ -1,0 +1,50 @@
+#!\bin\bash
+# Content: execute the linear model and its extensions.
+# Author: Yang Yang
+# Date:"Tue Jul  1 08:57:26 2014"
+# Usage: 
+#######################################################################################
+suppressPackageStartupMessages(require(getopt)) # load necessary packages
+spec = matrix(c(
+		'verbose', 'v', 0, "logical","display verbose message printed",
+		'help'   , 'h', 0, "logical","call 'help' document",
+		'input_file'  , 'i', 1, "character","the data you want to run program on",
+		'knowledge_driven_factors'  , 'k', 1, "character","colnames delimited by comma. E.g., AGE,GENDER,WEIGHT",
+		'outputname_essence'  , 'o', 1, "character","the output essence name you want to use, e.g. PowerCurve_independenceWkCor_on_AR1data_h0.001",
+		'SNOW_or_MC'     , 'S', 1, "character","SNOW or MC (parallel scheme)",
+		'jobExecuteOnMultipleNodes'     , 'j', 1, "logical","TRUE of FALSE (parallel run on single node or multiple )"
+		), byrow=TRUE, ncol=5);
+opt = getopt(spec);
+print(opt)
+# if help was asked for print a friendly message
+# and exit with a non-zero error code
+if ( length(opt) == 1 | !is.null(opt$help) ) { # conditions call 'help'
+    cat(getopt(spec, usage=TRUE));
+    q(status=1);
+}
+
+
+#set some reasonable defaults for the options that are needed,
+#but were not specified.
+# if ( is.null(opt$mean    ) ) { opt$mean    = 0     }
+# if ( is.null(opt$sd      ) ) { opt$sd      = 1     }
+# if ( is.null(opt$count   ) ) { opt$count   = 10    }
+# if ( is.null(opt$verbose ) ) { opt$verbose = FALSE }
+
+
+#print some progress messages to stderr, if requested.
+if ( !is.null(opt$verbose) ) { write("Parsing commands...",stdout()); }
+
+
+for(i in 1:length(opt))  {
+    assign(names(opt)[i],opt[[i]]) # assign opt member obj into .GlobalEnv for later call usage.
+}
+
+
+if ( grepl("^T",jobExecuteOnMultipleNodes,perl=T,ig=T) ) jEOM <- T else if ( grepl("^F",jobExecuteOnMultipleNodes,perl=T,ig=T) ) jEOM = F else notage()
+message("SNOW_or_MC choice is:",SNOW_or_MC)
+# the example we use is
+date()
+cat("=====================================================")
+suppressPackageStartupMessages( invisible(source("~/head.r") ) )
+setwd("/work/02040/yyang/dissertation_proj/SimulationData")

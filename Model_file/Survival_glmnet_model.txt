@@ -1,0 +1,31 @@
+# Content: The function templates used in 'Survival_glmnet.r'. The algorithm may have more than one function which can be tuned.
+# Usage:look up the manual before you specifiy the function arguments
+# Note: always use hash sign '#' to comment
+#		the function always start with ':functionName:subfunction:subsubfunction...'
+# 		comment a ':function[:subfunc]' will make it run by default arguments setup in program script (unseen except you look up the source code). I recommend always put the function arguments here for convenience and avoid unforseen problem.
+########################################################################################
+
+# ==============RSForest is the module to be called=======================# 
+# only allow one main module in one model file, e.g. ":module_name"
+:Survival_glmnet	# the main module name, only allow one in this file.
+	data = data_input,
+	response_variables = c("LOS.x","died"), 
+	knowledge_driven_factors = knowledge_driven_factors_vec, 
+	data_driven_factors = data_driven_factors_vec, 
+	factors_annotation_table = factors_all, 
+	timeResponseVar = "LOS.x", 
+	eventResponseVar = "died",
+	.seed=123,
+	plotNameEssence = sprintf("Survival_glmnet_plot_at_%s",nowTimeToString())	
+# ---------a function to settup the parallel scheme within rfsrc package.---------#
+:Survival_glmnet:cv.glmnet
+	x = new_X_modelExpanded_overall, 
+	y = Surv_obj, 
+	family="cox",
+	alpha=0.5, 
+	lambda = NULL, 
+	nfolds=10, 
+#	keep=T, 	# not needed for 'cox'
+	penalty.factor = keepKnowledgeFactor_seq,
+	parallel=T,
+	standardize = F	# 1 for lasso, 0 for ridge.

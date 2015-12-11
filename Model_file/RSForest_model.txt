@@ -1,0 +1,64 @@
+# Content: The function templates used in 'RSForest.r'. The algorithm may have more than one function which can be tuned.
+# Usage: look up the manual before you specifiy the function arguments
+# Note: always use hash sign '#' to comment
+#		the function always start with ':functionName:subfunction:subsubfunction...'
+########################################################################################
+
+# ==============RSForest is the module to be called=======================# 
+# only allow one main module in one model file, e.g. ":module_name"
+:RSForest	# the main module name, only allow one in this file.
+	data = data_input,
+	# response_variables = response_variables_vec, 
+	response_variables = c("LOS.x","died"), 
+	knowledge_driven_factors = knowledge_driven_factors_vec, 
+	data_driven_factors = data_driven_factors_vec, 
+	factors_annotation_table = factors_all, 
+	timeResponseVar = "LOS.x", 
+	eventResponseVar = "died",	# event must indicate death, readmission, etc. Not 'censored'.
+	.seed=123,
+	plotNameEssence = sprintf("RSForest_plot_at_%s",nowTimeToString()),	# change this value is necessary, as it lead to output name suffix.
+	add_varMarginalEffectPartialPlot = FALSE	# this will cost time for sure, but more accurate since adjusting for other variables.
+
+# ---------a function to settup the parallel scheme within rfsrc package.---------#
+:RSForest:setRSForest_cores
+	rf.cores_openMP = detectCores() - 1	# set to 1 to force serial
+	mc.cores_fork = detectCores() - 1	# set to 1 to force serial
+
+# --------------------rfsrc is one function inside module to be called---------------# 
+:RSForest:rfsrc
+	formula = formula_unionALLnY, # dont need to change, formula_unionALLnY defined in program already
+	data = data, # dont need to change, data defined in program already
+	ntree=1000, 	# the default value
+	split.null = TRUE, # test null hypothesis y has no assocaition with x.
+	na.action = "na.omit",
+	nsplit = 5,	# a maximum of 'nsplit' split points are chosen randomly for each of the 'mtry' variables within a node
+	importance = "none",	# save time, we will do it later using 'vimp' function.
+	# xvar.wt = 	# optional the weight of each variable; a vector.
+	proximity = FALSE,	# Should the proximity between observations be calculated? very large matrix nxn to store
+	forest = TRUE,	# store the forest for future prediction of new obs.
+	var.used = "all.trees",
+	split.depth = "all.trees",
+	seed = -(.seed), # Negative integer specifying seed for the random number generator
+	do.trace = TRUE	# trace info,
+	# ntime = ,	# Integer value which for survival families constrains ensemble calculations to a grid of time values of no more than ntime time points.
+
+# --------------------var.select is one function inside module to be called---------------#
+:RSForest:var.select
+	object = result, # dont need to change, value defined in program already
+	method = "md", 
+	conservative = "medium",
+	nsplit = 5, # recommend: same as above 'rfsrc' function.
+	na.action = "na.omit",
+	always.use = knowledge_driven_factors,	# fix these knowledge_driven_factors
+	do.trace = TRUE,	# trace info,
+	verbose = TRUE,	# verbose info,
+
+# ----------------vimp is one function inside module to be called----------------------#
+:RSForest:vimp
+	object = result, 
+	importance = "permute",
+	xvar.names = result_var_select$topvars,	# need this one to use only a subset of features, otherwise too slow to bear. STILL memory/time consuming, e.g. 60G mem
+	joint = FALSE,
+	seed = -(.seed),
+	do.trace = TRUE,				
+

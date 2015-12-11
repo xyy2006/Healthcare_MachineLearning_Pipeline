@@ -1,0 +1,21 @@
+# Note: keep this file within "Module_file" folder, dont change filename.
+# 		update algorithm list here.
+#		use '#' to comment.
+#############################################################
+#------------------------------------------------------#
+# add PrefeatureSelection module after "PrefeatureSelection_module:"
+PrefeatureSelection_module:
+uniCorr
+
+
+
+#------------------------------------------------------#
+# add Predictive module after "Predictive_module:"
+Predictive_module:
+RandomForest
+RSForest
+linearModelStepwise
+grpreg_linearGroupRegularized
+Survival_glmnet
+glmnet_linearRegularized
+

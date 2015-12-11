@@ -1,0 +1,721 @@
+"# includedInAnalysis='no' means this variable will be omitted in the analysis, 'yes' or leave blank means they enter the analysis."				
+"# dataType={""categorical"",""continuous""}"				
+"# drivenType={""knowledge"",""data""}"				
+"# comment: any comment put here, doesn't matter."				
+colname	drivenType	dataType	includedInAnalysis	comment
+ICD-9-CM.15	data	continuous	no	
+CC.15	data	categorical	no	redundant due to join
+ICD-9-CM.14	data	categorical	no	
+CC.14	data	categorical	no	
+ICD-9-CM.13	data	categorical	no	
+CC.13	data	categorical	no	
+ICD-9-CM.12	data	categorical	no	
+CC.12	data	categorical	no	
+ICD-9-CM.11	data	categorical	no	
+CC.11	data	categorical	no	
+ICD-9-CM.10	data	categorical	no	
+CC.10	data	categorical	no	
+ICD-9-CM.9	data	categorical	no	
+CC.9	data	categorical	no	
+ICD-9-CM.8	data	categorical	no	
+CC.8	data	categorical	no	
+ICD-9-CM.7	data	categorical	no	
+CC.7	data	categorical	no	
+ICD-9-CM.6	data	categorical	no	
+CC.6	data	categorical	no	
+ICD-9-CM.5	data	categorical	no	
+CC.5	data	categorical	no	
+ICD-9-CM.4	data	categorical	no	
+CC.4	data	categorical	no	
+ICD-9-CM.3	data	categorical	no	
+CC.3	data	categorical	no	
+ICD-9-CM.2	data	categorical	no	
+CC.2	data	categorical	no	
+ICD-9-CM.1	data	categorical	no	
+CC.1	data	categorical	no	"Primary never shift, give more weight; no missings.when DXCCS are enabled, this one must be disabled; Vice versa."
+KEYCSV	ID	continuous		
+VisitLink.x	ID	continuous		
+DaysToEvent.x	data	categorical	no	
+LOS.x	response	continuous		
+Year	data	categorical	no	
+DISPUNIFORM.x	data	categorical		
+PKEYCSV	ID	categorical	no	
+AGE	knowledge	continuous		
+AHOUR	data	categorical	no	
+AMONTH	data	categorical	no	
+ANESTH	data	categorical	no	
+ASOURCE	data	categorical	no	
+PointOfOriginUB04	data	categorical	no	
+ATYPE	data	categorical		
+AWEEKEND	data	categorical		
+DISPUNIFORM.y			no	redundant due to join
+DQTR	data	categorical		NA:1139
+DRG	data	categorical	no	
+DRG24	data	categorical	no	
+DSHOSPID	ID	categorical	no	
+DXCCS1	data	categorical		"Primary never shift, give more weight; no missings."
+DXCCS2	data	categorical	no	already reformed to DXCCS_secondary
+DXCCS3	data	categorical	no	already reformed to DXCCS_secondary
+DXCCS4	data	categorical	no	already reformed to DXCCS_secondary
+DXCCS5	data	categorical	no	already reformed to DXCCS_secondary
+DXCCS6	data	categorical	no	already reformed to DXCCS_secondary
+DXCCS7	data	categorical	no	already reformed to DXCCS_secondary
+DXCCS8	data	categorical	no	already reformed to DXCCS_secondary
+DXCCS9	data	categorical	no	already reformed to DXCCS_secondary
+DXCCS10	data	categorical	no	already reformed to DXCCS_secondary
+DXCCS11	data	categorical	no	already reformed to DXCCS_secondary
+DXCCS12	data	categorical	no	already reformed to DXCCS_secondary
+DXCCS13	data	categorical	no	already reformed to DXCCS_secondary
+DXCCS14	data	categorical	no	already reformed to DXCCS_secondary
+DXCCS15	data	categorical	no	already reformed to DXCCS_secondary
+DaysToEvent.y	data	categorical	no	
+FEMALE	knowledge	categorical		
+HCUP_ED	data	categorical		
+HCUP_OS	data	categorical		
+HOSPST	data	categorical	no	
+Homeless	data	categorical		
+LOS.y			no	redundant due to join
+MDC	data	categorical	no	two categories with one have only 12 samples
+MDC24	data	categorical	no	
+MDNUM1_R	data	categorical	no	physician 1 id
+MDNUM2_R	data	categorical	no	
+MEDINCSTQ	data	categorical	no	"represent the rich/poor of the patient zipcode,4171 missings."
+NDX	data	continuous		
+NPR	data	continuous		
+PAY1	data	categorical		
+PAY2	data	categorical	no	"only use PAY1, because NA in PAY2 are hared to transform."
+PL_UR_CAT4	data	categorical		have missing values
+PR1	data	categorical	no	original procedures in ICD-9
+PRCCS1	data	categorical		"Primary never shift, give more weight; have 25845 missing values, already set to 0 representing no procedures in data."
+PRCCS2	data	categorical	no	already reformed to PRCCS_secondary
+PRCCS3	data	categorical	no	already reformed to PRCCS_secondary
+PRCCS4	data	categorical	no	already reformed to PRCCS_secondary
+PRCCS5	data	categorical	no	already reformed to PRCCS_secondary
+PRCCS6	data	categorical	no	already reformed to PRCCS_secondary
+PRCCS7	data	categorical	no	already reformed to PRCCS_secondary
+PRCCS8	data	categorical	no	already reformed to PRCCS_secondary
+PRCCS9	data	categorical	no	already reformed to PRCCS_secondary
+PRCCS10	data	categorical	no	already reformed to PRCCS_secondary
+PRCCS11	data	categorical	no	already reformed to PRCCS_secondary
+PRCCS12	data	categorical	no	already reformed to PRCCS_secondary
+PRCCS13	data	categorical	no	already reformed to PRCCS_secondary
+PRCCS14	data	categorical	no	already reformed to PRCCS_secondary
+PRCCS15	data	categorical	no	already reformed to PRCCS_secondary
+RACE	knowledge	categorical		
+TOTCHG	data	categorical	no	
+VisitLink.y	id	categorical	no	redundant due to join
+ZIPINC_QRTL	data	categorical	no	
+BMONTH	data	categorical	no	
+BYEAR	data	categorical	no	
+ZIP	data	categorical	no	
+CM_AIDS	data	categorical		
+CM_ALCOHOL	data	categorical		
+CM_ANEMDEF	data	categorical		
+CM_ARTH	data	categorical		
+CM_BLDLOSS	data	categorical		
+CM_CHF	data	categorical		
+CM_CHRNLUNG	data	categorical		
+CM_COAG	data	categorical		
+CM_DEPRESS	data	categorical		
+CM_DM	data	categorical		
+CM_DMCX	data	categorical		
+CM_DRUG	data	categorical		
+CM_HTN_C	data	categorical		
+CM_HYPOTHY	data	categorical		
+CM_LIVER	data	categorical		
+CM_LYMPH	data	categorical		
+CM_LYTES	data	categorical		
+CM_METS	data	categorical		
+CM_NEURO	data	categorical		
+CM_OBESE	data	categorical		
+CM_PARA	data	categorical		
+CM_PERIVASC	data	categorical		
+CM_PSYCH	data	categorical		
+CM_PULMCIRC	data	categorical		
+CM_RENLFAIL	data	categorical		
+CM_TUMOR	data	categorical		
+CM_ULCER	data	categorical		
+CM_VALVE	data	categorical		
+CM_WGHTLOSS	data	categorical		
+N_CM	data	continuous		
+DXCCS_secondary_value1	data	categorical		
+DXCCS_secondary_value2	data	categorical		
+DXCCS_secondary_value3	data	categorical		
+DXCCS_secondary_value4	data	categorical		
+DXCCS_secondary_value5	data	categorical		
+DXCCS_secondary_value6	data	categorical		
+DXCCS_secondary_value7	data	categorical		
+DXCCS_secondary_value8	data	categorical		
+DXCCS_secondary_value9	data	categorical		
+DXCCS_secondary_value10	data	categorical		
+DXCCS_secondary_value11	data	categorical		
+DXCCS_secondary_value12	data	categorical		
+DXCCS_secondary_value13	data	categorical		
+DXCCS_secondary_value14	data	categorical		
+DXCCS_secondary_value15	data	categorical		
+DXCCS_secondary_value16	data	categorical		
+DXCCS_secondary_value17	data	categorical		
+DXCCS_secondary_value18	data	categorical		
+DXCCS_secondary_value19	data	categorical		
+DXCCS_secondary_value20	data	categorical		
+DXCCS_secondary_value21	data	categorical		
+DXCCS_secondary_value22	data	categorical		
+DXCCS_secondary_value23	data	categorical		
+DXCCS_secondary_value24	data	categorical		
+DXCCS_secondary_value25	data	categorical		
+DXCCS_secondary_value26	data	categorical		
+DXCCS_secondary_value27	data	categorical		
+DXCCS_secondary_value28	data	categorical		
+DXCCS_secondary_value29	data	categorical		
+DXCCS_secondary_value30	data	categorical		
+DXCCS_secondary_value31	data	categorical		
+DXCCS_secondary_value32	data	categorical		
+DXCCS_secondary_value33	data	categorical		
+DXCCS_secondary_value34	data	categorical		
+DXCCS_secondary_value35	data	categorical		
+DXCCS_secondary_value36	data	categorical		
+DXCCS_secondary_value37	data	categorical		
+DXCCS_secondary_value38	data	categorical		
+DXCCS_secondary_value39	data	categorical		
+DXCCS_secondary_value40	data	categorical		
+DXCCS_secondary_value41	data	categorical		
+DXCCS_secondary_value42	data	categorical		
+DXCCS_secondary_value43	data	categorical		
+DXCCS_secondary_value44	data	categorical		
+DXCCS_secondary_value45	data	categorical		
+DXCCS_secondary_value46	data	categorical		
+DXCCS_secondary_value47	data	categorical		
+DXCCS_secondary_value48	data	categorical		
+DXCCS_secondary_value49	data	categorical		
+DXCCS_secondary_value50	data	categorical		
+DXCCS_secondary_value51	data	categorical		
+DXCCS_secondary_value52	data	categorical		
+DXCCS_secondary_value53	data	categorical		
+DXCCS_secondary_value54	data	categorical		
+DXCCS_secondary_value55	data	categorical		
+DXCCS_secondary_value57	data	categorical		
+DXCCS_secondary_value58	data	categorical		
+DXCCS_secondary_value59	data	categorical		
+DXCCS_secondary_value60	data	categorical		
+DXCCS_secondary_value61	data	categorical		
+DXCCS_secondary_value62	data	categorical		
+DXCCS_secondary_value63	data	categorical		
+DXCCS_secondary_value64	data	categorical		
+DXCCS_secondary_value76	data	categorical		
+DXCCS_secondary_value77	data	categorical		
+DXCCS_secondary_value78	data	categorical		
+DXCCS_secondary_value79	data	categorical		
+DXCCS_secondary_value80	data	categorical		
+DXCCS_secondary_value81	data	categorical		
+DXCCS_secondary_value82	data	categorical		
+DXCCS_secondary_value83	data	categorical		
+DXCCS_secondary_value84	data	categorical		
+DXCCS_secondary_value85	data	categorical		
+DXCCS_secondary_value86	data	categorical		
+DXCCS_secondary_value87	data	categorical		
+DXCCS_secondary_value88	data	categorical		
+DXCCS_secondary_value89	data	categorical		
+DXCCS_secondary_value90	data	categorical		
+DXCCS_secondary_value91	data	categorical		
+DXCCS_secondary_value92	data	categorical		
+DXCCS_secondary_value93	data	categorical		
+DXCCS_secondary_value94	data	categorical		
+DXCCS_secondary_value95	data	categorical		
+DXCCS_secondary_value96	data	categorical		
+DXCCS_secondary_value97	data	categorical		
+DXCCS_secondary_value98	data	categorical		
+DXCCS_secondary_value99	data	categorical		
+DXCCS_secondary_value100	data	categorical		
+DXCCS_secondary_value101	data	categorical		
+DXCCS_secondary_value102	data	categorical		
+DXCCS_secondary_value103	data	categorical		
+DXCCS_secondary_value104	data	categorical		
+DXCCS_secondary_value105	data	categorical		
+DXCCS_secondary_value106	data	categorical		
+DXCCS_secondary_value107	data	categorical		
+DXCCS_secondary_value108	data	categorical		
+DXCCS_secondary_value109	data	categorical		
+DXCCS_secondary_value110	data	categorical		
+DXCCS_secondary_value111	data	categorical		
+DXCCS_secondary_value112	data	categorical		
+DXCCS_secondary_value113	data	categorical		
+DXCCS_secondary_value114	data	categorical		
+DXCCS_secondary_value115	data	categorical		
+DXCCS_secondary_value116	data	categorical		
+DXCCS_secondary_value117	data	categorical		
+DXCCS_secondary_value118	data	categorical		
+DXCCS_secondary_value119	data	categorical		
+DXCCS_secondary_value120	data	categorical		
+DXCCS_secondary_value121	data	categorical		
+DXCCS_secondary_value122	data	categorical		
+DXCCS_secondary_value123	data	categorical		
+DXCCS_secondary_value124	data	categorical		
+DXCCS_secondary_value125	data	categorical		
+DXCCS_secondary_value126	data	categorical		
+DXCCS_secondary_value127	data	categorical		
+DXCCS_secondary_value128	data	categorical		
+DXCCS_secondary_value129	data	categorical		
+DXCCS_secondary_value130	data	categorical		
+DXCCS_secondary_value131	data	categorical		
+DXCCS_secondary_value132	data	categorical		
+DXCCS_secondary_value133	data	categorical		
+DXCCS_secondary_value134	data	categorical		
+DXCCS_secondary_value135	data	categorical		
+DXCCS_secondary_value136	data	categorical		
+DXCCS_secondary_value137	data	categorical		
+DXCCS_secondary_value138	data	categorical		
+DXCCS_secondary_value139	data	categorical		
+DXCCS_secondary_value140	data	categorical		
+DXCCS_secondary_value141	data	categorical		
+DXCCS_secondary_value142	data	categorical		
+DXCCS_secondary_value143	data	categorical		
+DXCCS_secondary_value144	data	categorical		
+DXCCS_secondary_value145	data	categorical		
+DXCCS_secondary_value146	data	categorical		
+DXCCS_secondary_value147	data	categorical		
+DXCCS_secondary_value148	data	categorical		
+DXCCS_secondary_value149	data	categorical		
+DXCCS_secondary_value151	data	categorical		
+DXCCS_secondary_value152	data	categorical		
+DXCCS_secondary_value153	data	categorical		
+DXCCS_secondary_value154	data	categorical		
+DXCCS_secondary_value155	data	categorical		
+DXCCS_secondary_value156	data	categorical		
+DXCCS_secondary_value157	data	categorical		
+DXCCS_secondary_value158	data	categorical		
+DXCCS_secondary_value159	data	categorical		
+DXCCS_secondary_value160	data	categorical		
+DXCCS_secondary_value161	data	categorical		
+DXCCS_secondary_value162	data	categorical		
+DXCCS_secondary_value163	data	categorical		
+DXCCS_secondary_value164	data	categorical		
+DXCCS_secondary_value165	data	categorical		
+DXCCS_secondary_value166	data	categorical		
+DXCCS_secondary_value167	data	categorical		
+DXCCS_secondary_value168	data	categorical		
+DXCCS_secondary_value169	data	categorical		
+DXCCS_secondary_value170	data	categorical		
+DXCCS_secondary_value171	data	categorical		
+DXCCS_secondary_value172	data	categorical		
+DXCCS_secondary_value173	data	categorical		
+DXCCS_secondary_value175	data	categorical		
+DXCCS_secondary_value176	data	categorical		
+DXCCS_secondary_value195	data	categorical		
+DXCCS_secondary_value197	data	categorical		
+DXCCS_secondary_value198	data	categorical		
+DXCCS_secondary_value199	data	categorical		
+DXCCS_secondary_value200	data	categorical		
+DXCCS_secondary_value201	data	categorical		
+DXCCS_secondary_value202	data	categorical		
+DXCCS_secondary_value203	data	categorical		
+DXCCS_secondary_value204	data	categorical		
+DXCCS_secondary_value205	data	categorical		
+DXCCS_secondary_value206	data	categorical		
+DXCCS_secondary_value207	data	categorical		
+DXCCS_secondary_value208	data	categorical		
+DXCCS_secondary_value209	data	categorical		
+DXCCS_secondary_value210	data	categorical		
+DXCCS_secondary_value211	data	categorical		
+DXCCS_secondary_value212	data	categorical		
+DXCCS_secondary_value213	data	categorical		
+DXCCS_secondary_value214	data	categorical		
+DXCCS_secondary_value215	data	categorical		
+DXCCS_secondary_value216	data	categorical		
+DXCCS_secondary_value217	data	categorical		
+DXCCS_secondary_value224	data	categorical		
+DXCCS_secondary_value225	data	categorical		
+DXCCS_secondary_value226	data	categorical		
+DXCCS_secondary_value227	data	categorical		
+DXCCS_secondary_value228	data	categorical		
+DXCCS_secondary_value229	data	categorical		
+DXCCS_secondary_value230	data	categorical		
+DXCCS_secondary_value231	data	categorical		
+DXCCS_secondary_value232	data	categorical		
+DXCCS_secondary_value233	data	categorical		
+DXCCS_secondary_value234	data	categorical		
+DXCCS_secondary_value235	data	categorical		
+DXCCS_secondary_value236	data	categorical		
+DXCCS_secondary_value237	data	categorical		
+DXCCS_secondary_value238	data	categorical		
+DXCCS_secondary_value239	data	categorical		
+DXCCS_secondary_value240	data	categorical		
+DXCCS_secondary_value241	data	categorical		
+DXCCS_secondary_value242	data	categorical		
+DXCCS_secondary_value243	data	categorical		
+DXCCS_secondary_value244	data	categorical		
+DXCCS_secondary_value245	data	categorical		
+DXCCS_secondary_value246	data	categorical		
+DXCCS_secondary_value247	data	categorical		
+DXCCS_secondary_value248	data	categorical		
+DXCCS_secondary_value249	data	categorical		
+DXCCS_secondary_value250	data	categorical		
+DXCCS_secondary_value251	data	categorical		
+DXCCS_secondary_value252	data	categorical		
+DXCCS_secondary_value253	data	categorical		
+DXCCS_secondary_value254	data	categorical		
+DXCCS_secondary_value255	data	categorical		
+DXCCS_secondary_value256	data	categorical		
+DXCCS_secondary_value257	data	categorical		
+DXCCS_secondary_value258	data	categorical		
+DXCCS_secondary_value259	data	categorical		
+DXCCS_secondary_value650	data	categorical		
+DXCCS_secondary_value651	data	categorical		
+DXCCS_secondary_value652	data	categorical		
+DXCCS_secondary_value653	data	categorical		
+DXCCS_secondary_value654	data	categorical		
+DXCCS_secondary_value655	data	categorical		
+DXCCS_secondary_value656	data	categorical		
+DXCCS_secondary_value657	data	categorical		
+DXCCS_secondary_value658	data	categorical		
+DXCCS_secondary_value659	data	categorical		
+DXCCS_secondary_value660	data	categorical		
+DXCCS_secondary_value661	data	categorical		
+DXCCS_secondary_value662	data	categorical		
+DXCCS_secondary_value663	data	categorical		
+DXCCS_secondary_value670	data	categorical		
+PRCCS_secondary_value1	data	categorical		
+PRCCS_secondary_value2	data	categorical		
+PRCCS_secondary_value4	data	categorical		
+PRCCS_secondary_value5	data	categorical		
+PRCCS_secondary_value7	data	categorical		
+PRCCS_secondary_value8	data	categorical		
+PRCCS_secondary_value9	data	categorical		
+PRCCS_secondary_value10	data	categorical		
+PRCCS_secondary_value11	data	categorical		
+PRCCS_secondary_value12	data	categorical		
+PRCCS_secondary_value15	data	categorical		
+PRCCS_secondary_value17	data	categorical		
+PRCCS_secondary_value19	data	categorical		
+PRCCS_secondary_value26	data	categorical		
+PRCCS_secondary_value27	data	categorical		
+PRCCS_secondary_value28	data	categorical		
+PRCCS_secondary_value29	data	categorical		
+PRCCS_secondary_value31	data	categorical		
+PRCCS_secondary_value32	data	categorical		
+PRCCS_secondary_value33	data	categorical		
+PRCCS_secondary_value34	data	categorical		
+PRCCS_secondary_value35	data	categorical		
+PRCCS_secondary_value36	data	categorical		
+PRCCS_secondary_value37	data	categorical		
+PRCCS_secondary_value38	data	categorical		
+PRCCS_secondary_value39	data	categorical		
+PRCCS_secondary_value40	data	categorical		
+PRCCS_secondary_value41	data	categorical		
+PRCCS_secondary_value42	data	categorical		
+PRCCS_secondary_value43	data	categorical		
+PRCCS_secondary_value44	data	categorical		
+PRCCS_secondary_value45	data	categorical		
+PRCCS_secondary_value47	data	categorical		
+PRCCS_secondary_value48	data	categorical		
+PRCCS_secondary_value49	data	categorical		
+PRCCS_secondary_value50	data	categorical		
+PRCCS_secondary_value51	data	categorical		
+PRCCS_secondary_value52	data	categorical		
+PRCCS_secondary_value54	data	categorical		
+PRCCS_secondary_value55	data	categorical		
+PRCCS_secondary_value56	data	categorical		
+PRCCS_secondary_value57	data	categorical		
+PRCCS_secondary_value58	data	categorical		
+PRCCS_secondary_value59	data	categorical		
+PRCCS_secondary_value60	data	categorical		
+PRCCS_secondary_value61	data	categorical		
+PRCCS_secondary_value62	data	categorical		
+PRCCS_secondary_value63	data	categorical		
+PRCCS_secondary_value65	data	categorical		
+PRCCS_secondary_value67	data	categorical		
+PRCCS_secondary_value69	data	categorical		
+PRCCS_secondary_value70	data	categorical		
+PRCCS_secondary_value71	data	categorical		
+PRCCS_secondary_value72	data	categorical		
+PRCCS_secondary_value73	data	categorical		
+PRCCS_secondary_value75	data	categorical		
+PRCCS_secondary_value76	data	categorical		
+PRCCS_secondary_value77	data	categorical		
+PRCCS_secondary_value78	data	categorical		
+PRCCS_secondary_value81	data	categorical		
+PRCCS_secondary_value82	data	categorical		
+PRCCS_secondary_value83	data	categorical		
+PRCCS_secondary_value84	data	categorical		
+PRCCS_secondary_value85	data	categorical		
+PRCCS_secondary_value86	data	categorical		
+PRCCS_secondary_value87	data	categorical		
+PRCCS_secondary_value88	data	categorical		
+PRCCS_secondary_value89	data	categorical		
+PRCCS_secondary_value90	data	categorical		
+PRCCS_secondary_value91	data	categorical		
+PRCCS_secondary_value92	data	categorical		
+PRCCS_secondary_value93	data	categorical		
+PRCCS_secondary_value94	data	categorical		
+PRCCS_secondary_value95	data	categorical		
+PRCCS_secondary_value96	data	categorical		
+PRCCS_secondary_value97	data	categorical		
+PRCCS_secondary_value98	data	categorical		
+PRCCS_secondary_value99	data	categorical		
+PRCCS_secondary_value100	data	categorical		
+PRCCS_secondary_value101	data	categorical		
+PRCCS_secondary_value102	data	categorical		
+PRCCS_secondary_value103	data	categorical		
+PRCCS_secondary_value105	data	categorical		
+PRCCS_secondary_value108	data	categorical		
+PRCCS_secondary_value109	data	categorical		
+PRCCS_secondary_value110	data	categorical		
+PRCCS_secondary_value111	data	categorical		
+PRCCS_secondary_value112	data	categorical		
+PRCCS_secondary_value115	data	categorical		
+PRCCS_secondary_value116	data	categorical		
+PRCCS_secondary_value117	data	categorical		
+PRCCS_secondary_value118	data	categorical		
+PRCCS_secondary_value119	data	categorical		
+PRCCS_secondary_value120	data	categorical		
+PRCCS_secondary_value124	data	categorical		
+PRCCS_secondary_value125	data	categorical		
+PRCCS_secondary_value128	data	categorical		
+PRCCS_secondary_value130	data	categorical		
+PRCCS_secondary_value131	data	categorical		
+PRCCS_secondary_value132	data	categorical		
+PRCCS_secondary_value142	data	categorical		
+PRCCS_secondary_value145	data	categorical		
+PRCCS_secondary_value146	data	categorical		
+PRCCS_secondary_value147	data	categorical		
+PRCCS_secondary_value148	data	categorical		
+PRCCS_secondary_value153	data	categorical		
+PRCCS_secondary_value154	data	categorical		
+PRCCS_secondary_value155	data	categorical		
+PRCCS_secondary_value156	data	categorical		
+PRCCS_secondary_value157	data	categorical		
+PRCCS_secondary_value159	data	categorical		
+PRCCS_secondary_value160	data	categorical		
+PRCCS_secondary_value161	data	categorical		
+PRCCS_secondary_value162	data	categorical		
+PRCCS_secondary_value163	data	categorical		
+PRCCS_secondary_value164	data	categorical		
+PRCCS_secondary_value165	data	categorical		
+PRCCS_secondary_value166	data	categorical		
+PRCCS_secondary_value167	data	categorical		
+PRCCS_secondary_value168	data	categorical		
+PRCCS_secondary_value169	data	categorical		
+PRCCS_secondary_value170	data	categorical		
+PRCCS_secondary_value171	data	categorical		
+PRCCS_secondary_value172	data	categorical		
+PRCCS_secondary_value173	data	categorical		
+PRCCS_secondary_value174	data	categorical		
+PRCCS_secondary_value177	data	categorical		
+PRCCS_secondary_value178	data	categorical		
+PRCCS_secondary_value179	data	categorical		
+PRCCS_secondary_value180	data	categorical		
+PRCCS_secondary_value181	data	categorical		
+PRCCS_secondary_value182	data	categorical		
+PRCCS_secondary_value183	data	categorical		
+PRCCS_secondary_value184	data	categorical		
+PRCCS_secondary_value185	data	categorical		
+PRCCS_secondary_value186	data	categorical		
+PRCCS_secondary_value187	data	categorical		
+PRCCS_secondary_value188	data	categorical		
+PRCCS_secondary_value189	data	categorical		
+PRCCS_secondary_value190	data	categorical		
+PRCCS_secondary_value191	data	categorical		
+PRCCS_secondary_value192	data	categorical		
+PRCCS_secondary_value193	data	categorical		
+PRCCS_secondary_value194	data	categorical		
+PRCCS_secondary_value195	data	categorical		
+PRCCS_secondary_value196	data	categorical		
+PRCCS_secondary_value197	data	categorical		
+PRCCS_secondary_value198	data	categorical		
+PRCCS_secondary_value199	data	categorical		
+PRCCS_secondary_value200	data	categorical		
+PRCCS_secondary_value201	data	categorical		
+PRCCS_secondary_value202	data	categorical		
+PRCCS_secondary_value203	data	categorical		
+PRCCS_secondary_value204	data	categorical		
+PRCCS_secondary_value205	data	categorical		
+PRCCS_secondary_value206	data	categorical		
+PRCCS_secondary_value207	data	categorical		
+PRCCS_secondary_value208	data	categorical		
+PRCCS_secondary_value209	data	categorical		
+PRCCS_secondary_value210	data	categorical		
+PRCCS_secondary_value211	data	categorical		
+PRCCS_secondary_value212	data	categorical		
+PRCCS_secondary_value213	data	categorical		
+PRCCS_secondary_value214	data	categorical		
+PRCCS_secondary_value215	data	categorical		
+PRCCS_secondary_value216	data	categorical		
+PRCCS_secondary_value217	data	categorical		
+PRCCS_secondary_value218	data	categorical		
+PRCCS_secondary_value219	data	categorical		
+PRCCS_secondary_value220	data	categorical		
+PRCCS_secondary_value221	data	categorical		
+PRCCS_secondary_value222	data	categorical		
+PRCCS_secondary_value223	data	categorical		
+PRCCS_secondary_value224	data	categorical		
+PRCCS_secondary_value225	data	categorical		
+PRCCS_secondary_value226	data	categorical		
+PRCCS_secondary_value227	data	categorical		
+PRCCS_secondary_value228	data	categorical		
+PRCCS_secondary_value229	data	categorical		
+PRCCS_secondary_value231	data	categorical		
+DXCCnoS_secondary_value1	data	categorical	no	"when DXCCS are enabled, this one must be disabled; Vice versa."
+DXCCnoS_secondary_value2	data	categorical	no	
+DXCCnoS_secondary_value3	data	categorical	no	
+DXCCnoS_secondary_value4	data	categorical	no	
+DXCCnoS_secondary_value5	data	categorical	no	
+DXCCnoS_secondary_value6	data	categorical	no	
+DXCCnoS_secondary_value7	data	categorical	no	
+DXCCnoS_secondary_value8	data	categorical	no	
+DXCCnoS_secondary_value9	data	categorical	no	
+DXCCnoS_secondary_value10	data	categorical	no	
+DXCCnoS_secondary_value11	data	categorical	no	
+DXCCnoS_secondary_value12	data	categorical	no	
+DXCCnoS_secondary_value13	data	categorical	no	
+DXCCnoS_secondary_value14	data	categorical	no	
+DXCCnoS_secondary_value15	data	categorical	no	
+DXCCnoS_secondary_value16	data	categorical	no	
+DXCCnoS_secondary_value17	data	categorical	no	
+DXCCnoS_secondary_value18	data	categorical	no	
+DXCCnoS_secondary_value19	data	categorical	no	
+DXCCnoS_secondary_value21	data	categorical	no	
+DXCCnoS_secondary_value22	data	categorical	no	
+DXCCnoS_secondary_value23	data	categorical	no	
+DXCCnoS_secondary_value24	data	categorical	no	
+DXCCnoS_secondary_value25	data	categorical	no	
+DXCCnoS_secondary_value26	data	categorical	no	
+DXCCnoS_secondary_value27	data	categorical	no	
+DXCCnoS_secondary_value28	data	categorical	no	
+DXCCnoS_secondary_value29	data	categorical	no	
+DXCCnoS_secondary_value30	data	categorical	no	
+DXCCnoS_secondary_value31	data	categorical	no	
+DXCCnoS_secondary_value32	data	categorical	no	
+DXCCnoS_secondary_value33	data	categorical	no	
+DXCCnoS_secondary_value34	data	categorical	no	
+DXCCnoS_secondary_value35	data	categorical	no	
+DXCCnoS_secondary_value36	data	categorical	no	
+DXCCnoS_secondary_value37	data	categorical	no	
+DXCCnoS_secondary_value38	data	categorical	no	
+DXCCnoS_secondary_value39	data	categorical	no	
+DXCCnoS_secondary_value40	data	categorical	no	
+DXCCnoS_secondary_value41	data	categorical	no	
+DXCCnoS_secondary_value42	data	categorical	no	
+DXCCnoS_secondary_value43	data	categorical	no	
+DXCCnoS_secondary_value44	data	categorical	no	
+DXCCnoS_secondary_value45	data	categorical	no	
+DXCCnoS_secondary_value46	data	categorical	no	
+DXCCnoS_secondary_value47	data	categorical	no	
+DXCCnoS_secondary_value48	data	categorical	no	
+DXCCnoS_secondary_value49	data	categorical	no	
+DXCCnoS_secondary_value50	data	categorical	no	
+DXCCnoS_secondary_value51	data	categorical	no	
+DXCCnoS_secondary_value52	data	categorical	no	
+DXCCnoS_secondary_value53	data	categorical	no	
+DXCCnoS_secondary_value54	data	categorical	no	
+DXCCnoS_secondary_value55	data	categorical	no	
+DXCCnoS_secondary_value56	data	categorical	no	
+DXCCnoS_secondary_value57	data	categorical	no	
+DXCCnoS_secondary_value58	data	categorical	no	
+DXCCnoS_secondary_value59	data	categorical	no	
+DXCCnoS_secondary_value60	data	categorical	no	
+DXCCnoS_secondary_value61	data	categorical	no	
+DXCCnoS_secondary_value62	data	categorical	no	
+DXCCnoS_secondary_value63	data	categorical	no	
+DXCCnoS_secondary_value64	data	categorical	no	
+DXCCnoS_secondary_value65	data	categorical	no	
+DXCCnoS_secondary_value66	data	categorical	no	
+DXCCnoS_secondary_value67	data	categorical	no	
+DXCCnoS_secondary_value68	data	categorical	no	
+DXCCnoS_secondary_value69	data	categorical	no	
+DXCCnoS_secondary_value70	data	categorical	no	
+DXCCnoS_secondary_value71	data	categorical	no	
+DXCCnoS_secondary_value72	data	categorical	no	
+DXCCnoS_secondary_value73	data	categorical	no	
+DXCCnoS_secondary_value74	data	categorical	no	
+DXCCnoS_secondary_value75	data	categorical	no	
+DXCCnoS_secondary_value76	data	categorical	no	
+DXCCnoS_secondary_value77	data	categorical	no	
+DXCCnoS_secondary_value78	data	categorical	no	
+DXCCnoS_secondary_value79	data	categorical	no	
+DXCCnoS_secondary_value80	data	categorical	no	
+DXCCnoS_secondary_value81	data	categorical	no	
+DXCCnoS_secondary_value82	data	categorical	no	
+DXCCnoS_secondary_value83	data	categorical	no	
+DXCCnoS_secondary_value84	data	categorical	no	
+DXCCnoS_secondary_value85	data	categorical	no	
+DXCCnoS_secondary_value86	data	categorical	no	
+DXCCnoS_secondary_value87	data	categorical	no	
+DXCCnoS_secondary_value88	data	categorical	no	
+DXCCnoS_secondary_value89	data	categorical	no	
+DXCCnoS_secondary_value90	data	categorical	no	
+DXCCnoS_secondary_value91	data	categorical	no	
+DXCCnoS_secondary_value92	data	categorical	no	
+DXCCnoS_secondary_value93	data	categorical	no	
+DXCCnoS_secondary_value94	data	categorical	no	
+DXCCnoS_secondary_value95	data	categorical	no	
+DXCCnoS_secondary_value96	data	categorical	no	
+DXCCnoS_secondary_value97	data	categorical	no	
+DXCCnoS_secondary_value98	data	categorical	no	
+DXCCnoS_secondary_value99	data	categorical	no	
+DXCCnoS_secondary_value100	data	categorical	no	
+DXCCnoS_secondary_value101	data	categorical	no	
+DXCCnoS_secondary_value102	data	categorical	no	
+DXCCnoS_secondary_value103	data	categorical	no	
+DXCCnoS_secondary_value104	data	categorical	no	
+DXCCnoS_secondary_value105	data	categorical	no	
+DXCCnoS_secondary_value106	data	categorical	no	
+DXCCnoS_secondary_value108	data	categorical	no	
+DXCCnoS_secondary_value109	data	categorical	no	
+DXCCnoS_secondary_value110	data	categorical	no	
+DXCCnoS_secondary_value111	data	categorical	no	
+DXCCnoS_secondary_value112	data	categorical	no	
+DXCCnoS_secondary_value113	data	categorical	no	
+DXCCnoS_secondary_value114	data	categorical	no	
+DXCCnoS_secondary_value115	data	categorical	no	
+DXCCnoS_secondary_value116	data	categorical	no	
+DXCCnoS_secondary_value117	data	categorical	no	
+DXCCnoS_secondary_value118	data	categorical	no	
+DXCCnoS_secondary_value119	data	categorical	no	
+DXCCnoS_secondary_value120	data	categorical	no	
+DXCCnoS_secondary_value121	data	categorical	no	
+DXCCnoS_secondary_value122	data	categorical	no	
+DXCCnoS_secondary_value123	data	categorical	no	
+DXCCnoS_secondary_value124	data	categorical	no	
+DXCCnoS_secondary_value125	data	categorical	no	
+DXCCnoS_secondary_value126	data	categorical	no	
+DXCCnoS_secondary_value127	data	categorical	no	
+DXCCnoS_secondary_value128	data	categorical	no	
+DXCCnoS_secondary_value130	data	categorical	no	
+DXCCnoS_secondary_value131	data	categorical	no	
+DXCCnoS_secondary_value132	data	categorical	no	
+DXCCnoS_secondary_value133	data	categorical	no	
+DXCCnoS_secondary_value134	data	categorical	no	
+DXCCnoS_secondary_value135	data	categorical	no	
+DXCCnoS_secondary_value136	data	categorical	no	
+DXCCnoS_secondary_value138	data	categorical	no	
+DXCCnoS_secondary_value139	data	categorical	no	
+DXCCnoS_secondary_value140	data	categorical	no	
+DXCCnoS_secondary_value143	data	categorical	no	
+DXCCnoS_secondary_value148	data	categorical	no	
+DXCCnoS_secondary_value149	data	categorical	no	
+DXCCnoS_secondary_value151	data	categorical	no	
+DXCCnoS_secondary_value152	data	categorical	no	
+DXCCnoS_secondary_value153	data	categorical	no	
+DXCCnoS_secondary_value155	data	categorical	no	
+DXCCnoS_secondary_value156	data	categorical	no	
+DXCCnoS_secondary_value157	data	categorical	no	
+DXCCnoS_secondary_value158	data	categorical	no	
+DXCCnoS_secondary_value159	data	categorical	no	
+DXCCnoS_secondary_value160	data	categorical	no	
+DXCCnoS_secondary_value162	data	categorical	no	
+DXCCnoS_secondary_value163	data	categorical	no	
+DXCCnoS_secondary_value164	data	categorical	no	
+DXCCnoS_secondary_value165	data	categorical	no	
+DXCCnoS_secondary_value166	data	categorical	no	
+DXCCnoS_secondary_value167	data	categorical	no	
+DXCCnoS_secondary_value170	data	categorical	no	
+DXCCnoS_secondary_value171	data	categorical	no	
+DXCCnoS_secondary_value174	data	categorical	no	
+DXCCnoS_secondary_value175	data	categorical	no	
+DXCCnoS_secondary_value176	data	categorical	no	
+DXCCnoS_secondary_value177	data	categorical	no	
+DXCCnoS_secondary_value178	data	categorical	no	
+DXCCnoS_secondary_value179	data	categorical	no	
+DXCCnoS_secondary_value181	data	categorical	no	
+DXCCnoS_secondary_value182	data	categorical	no	
+DXCCnoS_secondary_value183	data	categorical	no	
+DXCCnoS_secondary_value184	data	categorical	no	

@@ -1,0 +1,5 @@
+setwd("/home/310166442/HCUP_data")
+a<-load("NY_SID_2009_CORE_DTE_allDISPUNIFORM.Rdata")
+readChar(c)
+readline
+library(MASS)

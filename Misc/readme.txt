@@ -1,0 +1,1 @@
+Misc folder stores some miscellaneous files including algorithms under developing/testing. 
