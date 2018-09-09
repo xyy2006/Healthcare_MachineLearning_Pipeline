@@ -1,4 +1,6 @@
-#!/usr/bin/Rscript --no-save --no-restore
+#!/usr/bin/env Rscript
+##!/usr/bin/env Rscript --no-save --no-restore
+##!/usr/bin/Rscript --no-save --no-restore
 ## !/usr/bin/Rscript --vanilla
 ##!/cadappl/R/3.1.0/lib64/R/bin/Rscript --vanilla --slave
 # Content: setting up the env for parallel computing and every variables needed for further computation using a specified statistical model/module.

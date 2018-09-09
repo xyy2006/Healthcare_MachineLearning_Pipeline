@@ -1,7 +1,7 @@
 #!/bin/bash
 # the Bash shell script wrapper for `ModelComputation_main` program.
 #---find the log file we just generated---#
-# echo $1 $2 ${10}  # test print several args.
+echo $1 $2 ${10}  # test print several args.
 ./ModelComputation_main $@ |& tee temp.log
 logfile=(`ls -ahlrt *.log|grep $USER | tail -n 2 |awk '{print $9}'`)
 for index in ${!logfile[@]}; 
